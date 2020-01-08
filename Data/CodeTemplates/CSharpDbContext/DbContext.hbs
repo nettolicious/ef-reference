@@ -1,0 +1,19 @@
+﻿{{> dbimports}}
+
+namespace Dole.TerminalOps.Data
+{
+    public partial class {{class}} : DbContext
+    {
+{{{> dbsets}}}
+{{#if entity-type-errors}}
+{{#each entity-type-errors}}
+{{spaces 8}}{{{entity-type-error}}}
+{{/each}}
+
+{{/if}}
+
+{{{> dbconstructor}}}
+
+{{{on-model-creating}}}
+    }
+}
