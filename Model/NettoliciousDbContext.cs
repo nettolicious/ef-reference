@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Dole.TerminalOps.Data.Entities;
+using Nettolicious.Model.Entities;
 
-namespace Dole.TerminalOps.Data
+namespace Nettolicious.Model
 {
-    public partial class TerminalOpsDbContext : DbContext
+    public partial class NettoliciousDbContext : DbContext
     {
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
@@ -14,7 +14,7 @@ namespace Dole.TerminalOps.Data
         public virtual DbSet<JobCandidate> JobCandidates { get; set; }
         public virtual DbSet<Shift> Shifts { get; set; }
 
-        public TerminalOpsDbContext(DbContextOptions<TerminalOpsDbContext> options) : base(options)
+        public NettoliciousDbContext(DbContextOptions<NettoliciousDbContext> options) : base(options)
         {
         }
 

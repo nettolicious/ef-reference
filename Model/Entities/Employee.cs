@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Dole.TerminalOps.Data.Entities
+namespace Nettolicious.Model.Entities
 {
 [Table("Employee", Schema = "HumanResources")]
     public partial class Employee
