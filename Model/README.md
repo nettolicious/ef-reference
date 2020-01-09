@@ -17,7 +17,7 @@ If you remove or rename a table, you need to manually delete any entities that a
 The DbContext 'NettoliciousDbContext.cs' gets written over
 
 ## Classes returned from stored procedures should be added to SpResults folder 
-* If the return is not an Entity, add the return type as a DbQuery in NettoliciousDbContext.SpResults.cs and add an Exec{MySpName} method 
+* If the return is not an Entity, add the return type as a DbSet in NettoliciousDbContext.SpResults.cs and add an Exec{MySpName} method 
 that returns IQueryable<MyCustomType>
 * If the return type is an Entity, simply add an Exec{MySpName} method that returns IQueryable<MyEntityType>
 
