@@ -5,16 +5,16 @@ using Autofac;
 
 namespace Nettolicious.Model.Tests {
   public static class DependencyResolver {
-    private static IContainer current;
+    private static IContainer mCurrent;
 
     public static IContainer Current {
       get {
-        if (current == null) {
+        if (mCurrent == null) {
           var builder = new ContainerBuilder();
           builder.RegisterModule(new Configuration());
-          current = builder.Build();
+          mCurrent = builder.Build();
         }
-        return current;
+        return mCurrent;
       }
     }
   }

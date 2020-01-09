@@ -6,17 +6,17 @@ using Microsoft.Extensions.Configuration;
 
 namespace Nettolicious.Model.E2E {
   public static class DependencyResolver {
-    private static IContainer current;
+    private static IContainer mCurrent;
 
     public static IContainer Current {
       get {
-        if (current == null) {
+        if (mCurrent == null) {
           var config = GetConfigurationRoot();
           var builder = new ContainerBuilder();
           builder.RegisterModule(new Model.Configuration(config["DbConnString"]));
-          current = builder.Build();
+          mCurrent = builder.Build();
         }
-        return current;
+        return mCurrent;
       }
     }
 

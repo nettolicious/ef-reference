@@ -5,14 +5,14 @@ using Autofac;
 
 namespace Nettolicious.Model {
   public class Configuration : Module {
-    private readonly string dbConnString;
+    private readonly string mDbConnString;
 
     public Configuration(string dbConnString) {
-      dbConnString = dbConnString ?? throw new ArgumentNullException(nameof(dbConnString));
+      mDbConnString = dbConnString ?? throw new ArgumentNullException(nameof(dbConnString));
     }
 
     protected override void Load(ContainerBuilder builder) {
-      builder.Register(c => NettoliciousDbContext.NewNettoliciousDbContext(dbConnString))
+      builder.Register(c => NettoliciousDbContext.NewNettoliciousDbContext(mDbConnString))
         .As<NettoliciousDbContext>()
         .InstancePerLifetimeScope();
     }

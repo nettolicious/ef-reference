@@ -6,20 +6,18 @@ Open PowerShell and navigate to project directory and run the following script:
 
 The script runs a command similar to the following, that will generate JfccDbContext and the entity classes:
 
-dotnet ef dbcontext scaffold "Data Source=MiSqlJfcc2;Initial Catalog=JFCC;user id=devadmin;password=special" 
-  Microsoft.EntityFrameworkCore.SqlServer -d -f -o Entities -c JfccDbContext --context-dir "./" -t Bin -t BinAlias -t BinAliasFamily 
-  -t BinHierarchy -t BinType -t BinItemRef -t BinItem
+dotnet ef dbcontext scaffold "Server=.;Database=AdventureWorks;Integrated Security=true;" 
+  Microsoft.EntityFrameworkCore.SqlServer -d -f -o Entities -c NettoliciousDbContext --context-dir "./" -t HumanResources.Department -t HumanResources.Employee -t HumanResources.EmployeeDepartmentHistory
 
 ** IMPORTANT
 The classes in the Entities folder get written over, but no files get deleted
 If you remove or rename a table, you need to manually delete any entities that are no longer needed
-The DbContext 'JfccDbContext.cs' gets written over
+The DbContext 'NettoliciousDbContext.cs' gets written over
 
 ## Classes returned from stored procedures should be added to SpResults folder 
-* If the return is not an Entity, add the return type as a DbQuery in JfccDbContext.Custom.cs and add an Exec{MySpName} method 
+* If the return is not an Entity, add the return type as a DbQuery in NettoliciousDbContext.Custom.cs and add an Exec{MySpName} method 
 that returns IQueryable<MyCustomType>
 * If the return type is an Entity, simply add an Exec{MySpName} method that returns IQueryable<MyEntityType>
-
 
 Note the use of handlebars templates to customize the generation of the DbContext and entities. You need to copy the CodeTemplates
 for C# from the NuGet package.
