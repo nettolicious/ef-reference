@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xunit;
 
 namespace Nettolicious.Model.E2E {
-  public class DepartmentTests {
+  public class CrudTests {
     [Fact]
     public async Task Add_Should_SaveNewDepartment() {
       // Arrange

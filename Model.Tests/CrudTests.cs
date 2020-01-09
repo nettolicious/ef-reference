@@ -1,11 +1,11 @@
-using System;
-using Xunit;
 using Nettolicious.Common.Extensions;
 using Nettolicious.Model.Entities;
+using System;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace Nettolicious.Model.Tests {
-  public class DepartmentTests {
+  public class CrudTests {
     [Fact]
     public async Task Add_Should_SaveNewDepartment() {
       // Arrange

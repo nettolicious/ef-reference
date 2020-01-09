@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Autofac;
+﻿using Autofac;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Nettolicious.Model.Tests {
   public class Configuration : Module {

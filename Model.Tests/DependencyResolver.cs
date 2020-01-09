@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Autofac;
+﻿using Autofac;
 
 namespace Nettolicious.Model.Tests {
   public static class DependencyResolver {

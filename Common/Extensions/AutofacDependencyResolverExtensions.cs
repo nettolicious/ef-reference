@@ -1,5 +1,4 @@
-﻿using System;
-using Autofac;
+﻿using Autofac;
 
 namespace Nettolicious.Common.Extensions {
   public static class AutofacDependencyResolverExtensions {
