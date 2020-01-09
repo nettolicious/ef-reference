@@ -2,11 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>Dole.TerminalOps.Data</AssemblyName>
-    <RootNamespace>Dole.TerminalOps.Data</RootNamespace>
+    <AssemblyName>Nettolicious.Model</AssemblyName>
+    <RootNamespace>Nettolicious.Model</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
     <PackageReference Include="EntityFrameworkCore.Scaffolding.Handlebars" Version="3.6.0" />
     <PackageReference Include="Inflector.NetStandard" Version="1.2.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />

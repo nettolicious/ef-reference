@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Design;
 using System.Globalization;
 
-namespace Dole.TerminalOps.Data.Infrastructure {
+namespace Nettolicious.Model.Infrastructure {
   public class Pluralizer : IPluralizer {
     private readonly Inflector.Inflector _inflector;
 

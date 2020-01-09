@@ -1,4 +1,4 @@
-﻿[string]$dbContextName = "TerminalOpsDbContext"
+﻿[string]$dbContextName = "NettoliciousDbContext"
 [string]$entitiesFolder = "Entities"
 [string]$connString = "Server=.;Database=AdventureWorks;Integrated Security=true;"
 [string[]]$tables = "HumanResources.Department",
