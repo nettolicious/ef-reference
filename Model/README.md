@@ -1,4 +1,6 @@
-﻿To regenerate model:
+# About & Instructions
+
+## To regenerate model
 
 Open PowerShell and navigate to project directory and run the following script:
 
@@ -9,7 +11,7 @@ The script runs a command similar to the following, that will generate JfccDbCon
 dotnet ef dbcontext scaffold "Server=.;Database=AdventureWorks;Integrated Security=true;" 
   Microsoft.EntityFrameworkCore.SqlServer -d -f -o Entities -c NettoliciousDbContext --context-dir "./" -t HumanResources.Department -t HumanResources.Employee -t HumanResources.EmployeeDepartmentHistory
 
-** IMPORTANT
+## IMPORTANT
 The classes in the Entities folder get written over, but no files get deleted
 If you remove or rename a table, you need to manually delete any entities that are no longer needed
 The DbContext 'NettoliciousDbContext.cs' gets written over
