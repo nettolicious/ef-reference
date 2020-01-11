@@ -6,7 +6,7 @@ Open PowerShell and navigate to project directory and run the following script:
 
 .\ScaffoldDbContext.ps1
 
-The script runs a command similar to the following, that will generate JfccDbContext and the entity classes:
+The script runs a command similar to the following, that will generate NettoliciousDbContext and the entity classes:
 
 dotnet ef dbcontext scaffold "Server=.;Database=AdventureWorks;Integrated Security=true;" 
   Microsoft.EntityFrameworkCore.SqlServer -d -f -o Entities -c NettoliciousDbContext --context-dir "./" -t HumanResources.Department -t HumanResources.Employee -t HumanResources.EmployeeDepartmentHistory
