@@ -24,21 +24,20 @@ The script runs a command similar to the following, that will generate Nettolici
 dotnet ef dbcontext scaffold "Server=.;Database=AdventureWorks;Integrated Security=true;" 
   Microsoft.EntityFrameworkCore.SqlServer -d -f -o Entities -c NettoliciousDbContext --context-dir "./" -t HumanResources.Department -t HumanResources.Employee -t HumanResources.EmployeeDepartmentHistory
 
-Note that the classes in the Entities folder get written over, but no files get deleted
-If you remove or rename a table, you need to manually delete any entities that are no longer needed
+Note that the classes in the Entities folder get written over, but no files get deleted.
+If you remove or rename a table, you need to manually delete any entities that are no longer needed.
 The DbContext 'NettoliciousDbContext.cs' gets written over.
 
 Note the use of handlebars templates to customize the generation of the DbContext and entities. You need to copy the CodeTemplates
 for C# from the NuGet package.
 
-We are using design time services to hook up handlebars templates and pluralization in Infrastructure/ScaffoldingDesignTimeServices
+Note the use of design time services to hook up handlebars templates and pluralization in Infrastructure/ScaffoldingDesignTimeServices.
 
 ## Stored Procedures 
 * If the return is not a generated Entity
     * Add the entity to the SpResults folder
     * Add the return type as a DbSet in NettoliciousDbContext.SpResults.cs and add an Exec{MySpName} method 
 that returns IQueryable<MyCustomType>
-** 
 * If the return type is an Entity, simply add an Exec{MySpName} method that returns IQueryable<MyEntityType>
 
 ## References
