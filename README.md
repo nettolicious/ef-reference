@@ -17,12 +17,11 @@ https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks
 
 Open PowerShell and navigate to project directory and run the following script:
 
-.\ScaffoldDbContext.ps1
+    .\ScaffoldDbContext.ps1
 
 The script runs a command similar to the following, that will generate NettoliciousDbContext and the entity classes:
 
-dotnet ef dbcontext scaffold "Server=.;Database=AdventureWorks;Integrated Security=true;" 
-  Microsoft.EntityFrameworkCore.SqlServer -d -f -o Entities -c NettoliciousDbContext --context-dir "./" -t HumanResources.Department -t HumanResources.Employee -t HumanResources.EmployeeDepartmentHistory
+    dotnet ef dbcontext scaffold "Server=.;Database=AdventureWorks;Integrated Security=true;" Microsoft.EntityFrameworkCore.SqlServer -d -f -o Entities -c NettoliciousDbContext --context-dir "./" -t HumanResources.Department -t HumanResources.Employee -t HumanResources.EmployeeDepartmentHistory
 
 Note that the classes in the Entities folder get written over, but no files get deleted.
 If you remove or rename a table, you need to manually delete any entities that are no longer needed.
