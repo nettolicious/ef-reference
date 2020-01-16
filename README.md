@@ -1,4 +1,4 @@
-# Reference Entity Framework with Scaffolding
+# Reference .NET Core Entity Framework 3.1 with Scaffolding
 
 ## Features
 * Scaffold DbContext and entities from command line with powershell script
@@ -33,7 +33,7 @@ for C# from the NuGet package.
 Note the use of design time services to hook up handlebars templates and pluralization in Infrastructure/ScaffoldingDesignTimeServices.
 
 ## Stored Procedures 
-* If the return is not a generated Entity
+* If the return type is not a generated Entity
     * Add the entity to the SpResults folder
     * Add the return type as a DbSet in NettoliciousDbContext.SpResults.cs and add an Exec{MySpName} method 
 that returns IQueryable<MyCustomType>
